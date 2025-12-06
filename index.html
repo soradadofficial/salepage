@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SORADAD x SHOPEEADS</title>
+    <meta name="description" content="ช้อปสินค้าคุณภาพจากแบรนด์ดัง">
+    <meta name="keywords" content="shopping, affiliate, lazada, shopee">
+
+    <!-- Fonts: Inter & Kanit (for Thai support) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Kanit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Analytics Placeholder (Will be injected by script.js) -->
+    <div id="analytics-container"></div>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="glass-header">
+        <div class="container header-content">
+            <div class="logo">
+                <img id="site-logo" src="" alt="Logo">
+            </div>
+            <nav class="nav-links">
+                <a href="#products">สินค้าแนะนำ</a>
+                <a href="#contact">ติดต่อเรา</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Video Background -->
+        <div class="hero-video-container">
+            <video autoplay muted loop playsinline id="hero-video">
+                <!-- OpenAI Video -->
+                <source
+                    src="https://videos.openai.com/az/files/00000000-6070-7282-9b4a-68cf2b8c6e8e%2Fraw?se=2025-12-08T00%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-12-06T01%3A08%3A44Z&ske=2025-12-13T01%3A13%3A44Z&sks=b&skv=2024-08-04&sig=r8yqm4ico8NwyhluB2TMukzN4C66gNqDZC0X1sSvP3k%3D&ac=oaisdsorprwestus"
+                    type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+
+        <div class="container hero-content">
+            <h1>ดีลเด็ด ราคาโดนใจ<br><span>คัดมาให้แล้วที่นี่</span></h1>
+            <p>ช้อปสินค้าคุณภาพจากแบรนด์ดัง ในราคาสุดพิเศษ</p>
+            <a href="#products" class="btn btn-primary cta-pulse">ช้อปเลย</a>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">✨ สินค้าแนะนำ</h2>
+
+            <!-- Products Loader -->
+            <div id="loading" class="loading-spinner">
+                <i class="fas fa-circle-notch fa-spin"></i> กำลังโหลดสินค้า...
+            </div>
+
+            <!-- Product Container (Injected via JS) -->
+            <div id="product-grid" class="product-grid"></div>
+
+            <!-- Pagination -->
+            <div id="pagination-controls" class="pagination-container"></div>
+        </div>
+    </section>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modal-img" src="" alt="Product Image">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-price" class="product-price"></p>
+                    <div id="modal-desc" class="modal-description"></div>
+                    <div id="modal-actions" class="product-actions">
+                        <!-- Buttons injected here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2024 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- CSV Parser Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+    <!-- App Config & Logic -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
